@@ -1,0 +1,273 @@
+body {
+  font-family: "Poppins", sans-serif;
+  margin: 50px 50px 0 50px;
+  background-color: #faf9f6;
+
+  min-height: 95vh;
+
+  background: repeating-linear-gradient(to bottom, lightskyblue,lightgray, lightskyblue);
+  vertical-align:middle;
+}
+
+.main {
+  display: flex;
+  flex-direction: column;
+  min-width: 350px;
+}
+
+.logo {
+  display:inline-block;
+  flex: 1;
+}
+
+header > p {
+  flex: 1;
+  font-size: 2rem;
+  margin: 0;
+  padding: 0;
+  display: block;
+  text-transform: uppercase;
+  font-weight: bold;
+}
+
+.card {
+  display: inline-block;
+  margin: 0px 0px 10px 0px;
+  font-size: 1rem;
+  border: 5px dotted rgb(235,84,67);
+  border-radius: 5%;
+  img {
+    float: left;
+    padding: 10px 10px 10px 10px;
+    border-radius: 5%;
+    overflow:hidden;
+    border: 1px hidden rgb(235,84,67);
+    border-radius: 10%;
+  }
+  p {
+    text-align: justify;
+    padding: 0px 10px 10px 10px;
+  }
+}
+
+.tile-image {
+  max-width: 50%;
+}
+
+.bb {
+  color: midnightblue;  
+}
+
+h1 {
+  flex: 1;
+  font-size: 2rem;
+  background-color: lightcoral;
+  margin: 0px 0px 10px 0px;
+  padding: 0;
+  display: block;
+  text-transform: capitalize;
+  text-align: center;
+  border: 5px ridge rgb(235,84,67);
+  border-top-left-radius: 50%;
+  border-top-right-radius: 50%;
+  border-bottom-left-radius: 5%;
+  border-bottom-right-radius: 5%;
+}
+
+h2 {
+  font-size: 1rem;
+}
+
+.card.right {
+  img {
+    float: right;
+  }
+
+  h3 {
+    text-align: right;
+  }
+}
+
+header {
+  align-content: center;
+  .logo {
+    border: 5px ridge rgb(235,84,67);
+    padding: 10px;
+    width: 20%;
+  }
+  p {
+    display: block;
+    border: 5px ridge rgb(235,84,67);
+    border-top-left-radius: 0%;
+    border-top-right-radius: 25%;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+  }
+}
+
+footer {
+  text-align: right;
+  color: midnightblue;
+}
+
+@media (max-width: 400px) {
+  header {
+    display: flex;
+    vertical-align: middle;
+    max-height: 290px;
+  }
+  .logo {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    width: auto;
+    border-radius: 50%;
+    background: radial-gradient(forestgreen 30%,transparent,lightcoral, black);
+  }
+  header > p {
+    flex: 1;
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+    vertical-align: middle;
+    font-size: 1.7rem;
+    border: 5px ridge rgb(235,84,67);
+    border-radius: 50%;
+    background: radial-gradient(forestgreen 30%,transparent, lightcoral, black);
+  }
+  header {
+    width: 100%;
+    height: 100%;
+    padding: 0px 0px 0px 0px;
+    img {
+      width: 100%;
+    }
+  }
+  h1 {
+    font-size: 1.5rem;
+    padding: 20px;
+    border-bottom-left-radius: 50%;
+    border-bottom-right-radius: 50%;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+    background: radial-gradient(at 50% 15%, forestgreen 40%, transparent, lightcoral, black);
+  }
+  .card {
+    display: flex;
+    flex-direction: column;
+  }
+  .tile-image {
+    max-width: max-content;
+    display: block;
+  }
+  h2 {
+    text-align: left !important;
+    padding-left: 10px;
+  }
+  .card p {
+    margin: 0;
+    padding: 0px 10px 10px 10px;
+  }
+}
+
+@media (min-width: 401px) and (max-width: 700px) {
+  header {
+    display: flex;
+    flex-direction: row;
+    vertical-align: bottom;
+    max-height: 100%;
+  }
+  header>p {
+    flex: 1;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
+    display: block;
+    text-transform: uppercase;
+    font-size: 2.5rem;
+    text-wrap: wrap;
+    max-width:  45%;
+    border-bottom: 0px;
+    background: repeating-linear-gradient(to right, forestgreen,transparent, lightcoral);
+  }
+  .logo {
+    flex: 1;
+    border-top-left-radius: 25%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 0%;
+    border-bottom-left-radius: 0%;
+    border-bottom: 0px !important;
+    border-right: 0px !important;
+    background: repeating-linear-gradient(-90deg, forestgreen,transparent, lightcoral);
+   }
+  h1 {
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%; 
+    background: repeating-linear-gradient(90deg, lightcoral,transparent,forestgreen,transparent,lightcoral);
+  }
+  div.card.right>h2 {
+    text-align: right;
+  }
+}
+
+@media (min-width: 701px) {
+  .main {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 293px 140px 300px;
+    gap: 10px;
+    row-gap: 0px;
+  }
+  header {
+    grid-column: span 2;
+    display: flex;
+    flex-direction: row;
+  }
+  .logo {
+    flex: 1;
+    border-top-left-radius: 5%;
+    border-bottom: 0px !important;
+    border-right: 0px !important;
+    img {
+      padding: 0;
+      margin: 0px 10px 0px 0px;
+    }
+    background: repeating-linear-gradient(-66.66deg, forestgreen, transparent, lightcoral);
+    border-bottom: 0px;
+    border-right: 0px;
+  }
+  header > p {
+    flex: 1;
+    display: inline-block;
+    border-top-right-radius: 5%;
+    font-size: 4rem;
+    padding-left: 10px;
+    background: repeating-linear-gradient(66.66deg, forestgreen, transparent, lightcoral);
+    border-bottom: 0px;
+    border-left: 0px;
+  }
+  h1 {
+    grid-column: span 2;
+    text-align: left;
+    padding: 15px 0px 0px 15px;
+    border-top-left-radius: 0%;
+    border-top-right-radius: 0%;
+    border-bottom-right-radius: 5%;
+    border-bottom-left-radius: 5%;
+    border-top: hidden;
+    margin-bottom: 0px;
+    background: radial-gradient(
+      at 50% 0%,
+      forestgreen,
+      transparent,
+      lightcoral
+    );
+    margin-bottom: 10px;
+  }
+  .card.right {
+    img {
+      float: left;
+    }
+  }  
+}
