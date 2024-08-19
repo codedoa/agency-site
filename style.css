@@ -150,7 +150,7 @@ footer {
     border-bottom-right-radius: 50%;
     border-top-left-radius: 5%;
     border-top-right-radius: 5%;
-    background: radial-gradient(at 50% 15%, forestgreen 40%, transparent, lightcoral, black);
+    background: radial-gradient(at 50% 100%, lightcoral, transparent, lightcoral 75%, black);
   }
   .card {
     display: flex;
