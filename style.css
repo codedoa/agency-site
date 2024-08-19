@@ -271,6 +271,11 @@ footer {
     );
     margin-bottom: 10px;
   }
+
+  .card p {
+    margin: 0px 0px 0px 0px;
+  }
+
   .card.right {
     img {
       float: left;
