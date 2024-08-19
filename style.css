@@ -167,6 +167,7 @@ footer {
   .card p {
     margin: 0;
     padding: 0px 10px 10px 10px;
+    object-fit: contain;
   }
 }
 
@@ -218,7 +219,7 @@ footer {
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 293px 140px 270px;
+    grid-template-rows: 293px 140px;
     gap: 10px;
     row-gap: 0px;
   }
