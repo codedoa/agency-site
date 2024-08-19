@@ -3,7 +3,8 @@ body {
   margin: 20px 20px 0 20px;
   background-color: #faf9f6;
   min-height: 95vh;
-  background: repeating-linear-gradient(to bottom, lightskyblue,lightgray, lightskyblue);
+  background: repeating-linear-gradient(
+    to bottom, lightsalmon,lightgray, lightskyblue);
   vertical-align:middle;
 }
 
@@ -45,6 +46,7 @@ header > p {
   p {
     text-align: justify;
     padding: 0px 10px 10px 10px;
+    margin-bottom: 0px;
   }
 }
 
@@ -66,10 +68,7 @@ h1 {
   text-transform: capitalize;
   text-align: center;
   border: 2px ridge rgb(235,84,67);
-  border-top-left-radius: 50%;
-  border-top-right-radius: 50%;
-  border-bottom-left-radius: 5%;
-  border-bottom-right-radius: 5%;
+  border-radius: 50% 50% 5% 5%;
 }
 
 h2 {
@@ -80,7 +79,6 @@ h2 {
   img {
     float: right;
   }
-
   h3 {
     text-align: right;
   }
@@ -96,10 +94,7 @@ header {
   p {
     display: block;
     border: 2px ridge rgb(235,84,67);
-    border-top-left-radius: 0%;
-    border-top-right-radius: 25%;
-    border-bottom-right-radius: 0%;
-    border-bottom-left-radius: 0%;
+    border-radius: 0% 25% 0% 0%;
   }
 }
 
@@ -114,14 +109,17 @@ footer {
     vertical-align: middle;
     max-height: 290px;
   }
+
   .logo {
     flex: 1;
     margin: 10px;
     padding: 10px;
     width: auto;
     border-radius: 50%;
-    background: radial-gradient(forestgreen 30%,transparent,lightcoral, black);
+    background: radial-gradient(
+      forestgreen 30%,transparent,lightcoral, black);
   }
+
   header > p {
     flex: 1;
     margin: 10px;
@@ -131,8 +129,10 @@ footer {
     font-size: 1.7rem;
     border: 2px ridge rgb(235,84,67);
     border-radius: 50%;
-    background: radial-gradient(forestgreen 30%,transparent, lightcoral, black);
+    background: radial-gradient(
+      forestgreen 30%,transparent, lightcoral, black);
   }
+
   header {
     width: 100%;
     height: 100%;
@@ -141,29 +141,32 @@ footer {
       width: 100%;
     }
   }
+
   h1 {
     font-size: 1.5rem;
     padding: 10px;
-    border-bottom-left-radius: 50%;
-    border-bottom-right-radius: 50%;
-    border-top-left-radius: 5%;
-    border-top-right-radius: 5%;
-    background: radial-gradient(at 50% 100%, lightcoral 5%, transparent 25%, lightcoral 75%, forestgreen);
+    border-radius: 5% 5% 50% 50%;
+    background: radial-gradient(at 50% 100%, 
+    lightcoral 5%, transparent 25%, lightcoral 75%, forestgreen);
   }
+
   .card {
     display: flex;
     flex-direction: column;
   }
+
   .tile-image {
     max-width: max-content;
     display: block;
   }
+
   h2 {
     text-align: left !important;
     padding-left: 10px;
     font-size: 1.5rem;
     margin: 0px 0px 5px 0px;
   }
+
   .card p {
     margin: 0;
     padding: 0px 10px 10px 10px;
@@ -178,6 +181,7 @@ footer {
     vertical-align: bottom;
     max-height: 100%;
   }
+
   header>p {
     flex: 1;
     margin: 0;
@@ -188,28 +192,29 @@ footer {
     text-wrap: wrap;
     max-width:  45%;
     border-bottom: 0px;
-    background: repeating-linear-gradient(to right, forestgreen,transparent, lightcoral);
+    background: repeating-linear-gradient(
+      to right, forestgreen,transparent, lightcoral);
   }
+
   .logo {
     flex: 1;
-    border-top-left-radius: 25%;
-    border-top-right-radius: 0%;
-    border-bottom-right-radius: 0%;
-    border-bottom-left-radius: 0%;
+    border-radius: 25% 0% 0% 0%;
     border-bottom: 0px !important;
     border-right: 0px !important;
-    background: repeating-linear-gradient(-90deg, forestgreen,transparent, lightcoral);
+    background: repeating-linear-gradient(-90deg, 
+      forestgreen,transparent, lightcoral);
    }
+
   h1 {
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-right-radius: 5%;
-    border-bottom-left-radius: 5%; 
-    background: repeating-linear-gradient(90deg, lightcoral,transparent,forestgreen,transparent,lightcoral);
+    border-radius: 0% 0% 10% 10%;
+    background: repeating-linear-gradient(90deg, 
+      lightcoral,transparent,forestgreen,transparent,lightcoral);
   }
+
   h2 {
     font-size: 1.2rem;
   }
+
   div.card.right>h2 {
     text-align: right;
   }
@@ -219,18 +224,20 @@ footer {
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 293px 140px;
+    grid-template-rows: 300px 140px;
     gap: 10px;
     row-gap: 0px;
   }
+
   header {
     grid-column: span 2;
     display: flex;
     flex-direction: row;
   }
+
   .logo {
     flex: 1;
-    border-top-left-radius: 5%;
+    border-top-left-radius: 10px;
     border-bottom: 0px !important;
     border-right: 0px !important;
     object-fit: contain;
@@ -238,17 +245,18 @@ footer {
       padding: 0;
       margin: 0px 10px 0px 0px;
     }
-    background: repeating-linear-gradient(-66.66deg, forestgreen, transparent, lightcoral);
-    border-bottom: 0px;
-    border-right: 0px;
+    background: repeating-linear-gradient(
+      -66.66deg, forestgreen, transparent, lightcoral);
   }
+
   header > p {
     flex: 1;
     display: inline-block;
     border-top-right-radius: 5%;
     font-size: 4rem;
     padding-left: 10px;
-    background: repeating-linear-gradient(66.66deg, forestgreen, transparent, lightcoral);
+    background: repeating-linear-gradient(
+      66.66deg, forestgreen, transparent, lightcoral);
     border-bottom: 0px;
     border-left: 0px;
   }
@@ -257,18 +265,10 @@ footer {
     grid-column: span 2;
     text-align: left;
     padding: 15px 0px 0px 15px;
-    border-top-left-radius: 0%;
-    border-top-right-radius: 0%;
-    border-bottom-right-radius: 5%;
-    border-bottom-left-radius: 5%;
+    border-radius: 0px 0px 5% 5%;
     border-top: hidden;
-    margin-bottom: 0px;
     background: radial-gradient(
-      at 50% 0%,
-      forestgreen,
-      transparent,
-      lightcoral
-    );
+      at 50% 0%,forestgreen, transparent, lightcoral);
     margin-bottom: 10px;
   }
 
