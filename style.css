@@ -82,6 +82,7 @@ h2 {
 footer p {
   text-align: right !important;
   color: midnightblue;
+  padding-right: 0px;
 }
 
 @media (max-width: 400px) {
