@@ -203,7 +203,9 @@ footer {
     background: linear-gradient(180deg,
       #FFC090,#7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #FFC090
     );
-    border-bottom: 1px solid black;
+    border-bottom: 2px solid #7FB77E;
+    border-bottom-left-radius: 5%;
+    border-bottom-right-radius: 5%;
   }
 
   header>p {
@@ -215,7 +217,7 @@ footer {
     text-transform: uppercase;
     font-size: 2.2rem;
     border: 0;
-    border-top-right-radius: 50%;
+    border-bottom-right-radius: 5%;
     background: linear-gradient(180deg,
       #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #FFC090
     );
@@ -233,9 +235,13 @@ footer {
   }
   
   h1 {
+    margin: -10px 0px 10px 0px;
     padding: 10px;
-    border-radius: 0;
-    border-bottom: 1px solid black;
+    padding-top: 20px;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+    border-bottom-left-radius: 25%;
+    border-bottom: 2px solid #7FB77E;
     border-left: none;
     border-top: none;
     background: linear-gradient(0deg,
@@ -244,11 +250,12 @@ footer {
   }
 
   .card {
-    border-color: #FFC090;
+    border-color: #7FB77E;
     background: radial-gradient(at 50% 45%,
-      #FFC090 25%, #B1D7B4, #F7F6DC
+      #B1D7B4, #F7F6DC, #FFC090
     );
   }
+
   h2 {
     font-size: 1.2rem;
   }
