@@ -220,8 +220,8 @@ footer {
     background: radial-gradient(at 50% 50%,
       #7FB77E 40%, #B1D7B4, transparent 70%
     );
-    max-height: 200px;
     max-width: 200px;
+    min-width: 180px;
   }
   
   h1 {
