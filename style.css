@@ -79,10 +79,12 @@ h2 {
     float: right;
 }
 
-footer p {
-  text-align: right !important;
-  color: midnightblue;
-  padding-right: 0px;
+footer {
+  p {
+    text-align: right;
+    color: midnightblue;
+    padding-right: 0px;
+  }
 }
 
 @media (max-width: 400px) {
@@ -98,7 +100,7 @@ footer p {
     padding: 10px;
     width: auto;
     border-radius: 50%;
-    border: 3px solid #B6E2A1 !important;
+    border: 0.2rem solid #B6E2A1 !important;
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 70%
     );
@@ -110,7 +112,7 @@ footer p {
     padding: 10px;
     text-align: center;
     font-size: 1.7rem;
-    border: 3px solid #B6E2A1;
+    border: 0.2rem solid #B6E2A1;
     border-radius: 50%;
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 70%
@@ -121,7 +123,7 @@ footer p {
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 0% 0% 50% 50%;
-    border: 3px solid #B6E2A1;
+    border: 0.2rem solid #B6E2A1;
     border-top: hidden;
     background: linear-gradient(0deg,
     #F7A4A4 30%, #B6E2A1 80%, transparent
@@ -131,6 +133,7 @@ footer p {
   .card {
     display: flex;
     flex-direction: column;
+    border: 0.2rem solid #B6E2A1;
     background: radial-gradient(
       #B6E2A1 35%, #F7A4A4 90%
     );
@@ -152,6 +155,18 @@ footer p {
     margin: 0;
     padding: 0px 10px 10px 10px;
     object-fit: contain;
+  }
+
+  footer {
+    min-width: 334px;
+    position: sticky;
+    bottom: 0;
+    padding-right: 10px;
+    border: 0.2rem solid #B6E2A1;
+    border-radius: 50% 50% 0% 0%;
+    background: linear-gradient(0deg,
+      #B6E2A1 20%,#F7A4A4 80%
+    );
   }
 }
 
