@@ -146,8 +146,8 @@ footer {
     font-size: 1.5rem;
     padding: 10px;
     border-radius: 5% 5% 50% 50%;
-    background: radial-gradient(at 50% 100%, 
-    lightcoral 5%, transparent 25%, lightcoral 75%, forestgreen);
+    background: radial-gradient(at 50% 0%, 
+    lightcoral 25%, forestgreen, lightcoral 75%);
   }
 
   .card {
@@ -245,8 +245,8 @@ footer {
       padding: 0;
       margin: 0px 10px 0px 0px;
     }
-    background: repeating-linear-gradient(
-      -66.66deg, forestgreen, transparent, lightcoral);
+    background: radial-gradient(
+      at 100% 100%,forestgreen, transparent, lightcoral);
   }
 
   header > p {
@@ -255,8 +255,8 @@ footer {
     border-top-right-radius: 5%;
     font-size: 4rem;
     padding-left: 10px;
-    background: repeating-linear-gradient(
-      66.66deg, forestgreen, transparent, lightcoral);
+    background: radial-gradient(
+      at 0% 100%,forestgreen, transparent, lightcoral);
     border-bottom: 0px;
     border-left: 0px;
   }
