@@ -4,7 +4,7 @@ body {
   background-color: #faf9f6;
   min-height: 95vh;
   background: repeating-linear-gradient(180deg, 
-    lightsalmon,lightgray, lightskyblue);
+    coral,lightgray, lightskyblue);
   vertical-align:middle;
 }
 
@@ -117,7 +117,7 @@ footer {
     width: auto;
     border-radius: 50%;
     background: radial-gradient(
-      forestgreen 40%,lightcoral, transparent 70%);
+      forestgreen 20%,lightcoral 60%, transparent);
   }
 
   header > p {
@@ -130,16 +130,7 @@ footer {
     border: 0.075rem ridge rgb(235,84,67);
     border-radius: 50%;
     background: radial-gradient(
-      forestgreen 40%, lightcoral, transparent 70%);
-  }
-
-  header {
-    width: 100%;
-    height: 100%;
-    padding: 0px 0px 0px 0px;
-    img {
-      width: 100%;
-    }
+      forestgreen 20%, lightcoral 60%, transparent);
   }
 
   h1 {
