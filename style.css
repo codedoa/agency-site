@@ -3,9 +3,9 @@ body {
   margin: 15px 15px 0 15px;
   background-color: #faf9f6;
   min-height: 95vh;
-  background: repeating-linear-gradient(180deg, 
-    forestgreen,lightskyblue, forestgreen, lightskyblue, forestgreen);
-  vertical-align:middle;
+  background: linear-gradient(180deg,
+    #FEBE8C, #FFFBC1, #FEBE8C, #FFFBC1, #FEBE8C
+  );
 }
 
 .main {
@@ -15,8 +15,15 @@ body {
 }
 
 .logo {
-  display:inline-block;
+  padding: 10px;
+  width: 20% !important;
   flex: 1;
+}
+
+p {
+  text-align: justify;
+  padding: 0px 10px 10px 10px;
+  margin-bottom: 0px;
 }
 
 header > p {
@@ -29,29 +36,19 @@ header > p {
   font-weight: bold;
 }
 
-.card {
-  display: inline-block;
+h1 {
+  flex: 1;
+  font-size: 2rem;
   margin: 0px 0px 10px 0px;
-  font-size: 1rem;
-  border: 5px dotted coral;
-  border-radius: 5%;
-  img {
-    float: left;
-    padding: 10px 10px 10px 10px;
-    border-radius: 5%;
-    overflow:hidden;
-    border: 0.05rem hidden black;
-    border-radius: 10%;
-  }
-  p {
-    text-align: justify;
-    padding: 0px 10px 10px 10px;
-    margin-bottom: 0px;
-  }
+  padding: 0;
+  display: block;
+  text-transform: capitalize;
+  text-align: center;
+  border-radius: 50% 50% 5% 5%;
 }
 
-.tile-image {
-  max-width: 50%;
+h2 {
+  font-size: 1rem;
 }
 
 .bb {
@@ -62,61 +59,35 @@ header > p {
   content: "!";
 }
 
-h1 {
-  flex: 1;
-  font-size: 2rem;
-  background-color: goldenrod;
-  margin: 0px 0px 10px 0px;
-  padding: 0;
-  display: block;
-  text-transform: capitalize;
-  text-align: center;
-  border: 0.075rem ridge goldenrod;
-  border-radius: 50% 50% 5% 5%;
-}
-
-h2 {
+.card {
+  display: inline-block;
+  margin: 0px 10px 10px 0px;
   font-size: 1rem;
+  border: 0.1rem ridge #B6E2A1;
+  border-radius: 5%;
 }
 
-.card.right {
-  img {
+.tile-image {
+  border: 0.05rem solid black;
+  max-width: 50%;
+  float: left;
+  margin: 10px;
+  border-radius: 10%;
+}
+
+.right img {
     float: right;
-  }
-  h3 {
-    text-align: right;
-  }
 }
 
-header {
-  align-content: center;
-  .logo {
-    border: 0.075rem ridge goldenrod;
-    padding: 10px;
-    width: 20%;
-  }
-  p {
-    display: block;
-    border: 0.075rem ridge goldenrod;
-    border-radius: 0% 25% 0% 0%;
-  }
-}
-
-footer {
-  text-align: right;
+footer p {
+  text-align: right !important;
   color: midnightblue;
 }
 
 @media (max-width: 400px) {
-  body {
-    background: linear-gradient(180deg,
-      #FEBE8C, #FFFBC1, #FEBE8C, #FFFBC1, #FEBE8C
-    );
-  }
-
   header {
     display: flex;
-    vertical-align: middle;
+    flex-direction: row;
     max-height: 300px;
   }
 
@@ -137,7 +108,6 @@ footer {
     margin: 10px;
     padding: 10px;
     text-align: center;
-    vertical-align: middle;
     font-size: 1.7rem;
     border: 3px solid #B6E2A1;
     border-radius: 50%;
@@ -160,7 +130,6 @@ footer {
   .card {
     display: flex;
     flex-direction: column;
-    border: 3px solid #B6E2A1;
     background: radial-gradient(
       #B6E2A1 35%, #F7A4A4 90%
     );
@@ -250,6 +219,7 @@ footer {
     border-bottom: 0.2rem solid #7FB77E;
     border-left: none;
     border-top: none;
+    border-right: none;
     background: linear-gradient(0deg,
       #FFC090, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
     );
@@ -281,6 +251,7 @@ footer {
       #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8,#FEBE8C,#F3FDE8, #A8DF8E
     );
   }
+
   .main {
     display: grid;
     grid-template-columns: 1fr 1fr;
@@ -312,7 +283,7 @@ footer {
     font-size: 3rem;
     padding-left: 4rem;
     background: radial-gradient(at 0% 100%,
-    #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
+      #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
     );
     border: none;
   }
@@ -323,13 +294,14 @@ footer {
     margin-bottom: 25px;
     padding: 15px;
     border-radius: 0% 0% 5% 5%;
-    border: 0px;
+    border-right: 0px !important;
     border-bottom: 0.5rex solid #FFBFBF;
     background: radial-gradient(at 50% 0%,
       #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
-      );  
+    );  
     max-width: 100%;
   }
+
   h2 {
     font-size: 1.1rem;
   }
@@ -340,13 +312,8 @@ footer {
      #FFE5E5 50%, #A8DF8E
     );
   }
-  .card p {
-    margin: 0px 0px 0px 0px;
-  }
 
-  .card.right {
-    img {
-      float: left;
-    }
-  }  
+  .right img {
+    float: left;
+  }
 }
