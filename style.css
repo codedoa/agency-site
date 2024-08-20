@@ -1,6 +1,7 @@
 body {
+  width: 100%;
   font-family: "Poppins", sans-serif;
-  margin: 15px 15px 0 15px;
+  margin: 0;
   background-color: #faf9f6;
   min-height: 95vh;
   background: linear-gradient(180deg,
@@ -87,7 +88,7 @@ footer {
   }
 }
 
-@media (max-width: 400px) {
+@media (max-width: 380px) {
   header {
     display: flex;
     flex-direction: row;
@@ -131,8 +132,16 @@ footer {
   }
 
   .card {
+    max-width: 100%;
     display: flex;
     flex-direction: column;
+    border: 0.2rem solid #B6E2A1;
+/* straight corners for cards
+    border-radius: 0%;
+    border-left: none;
+    border-right: none;
+*/
+
     border: 0.2rem solid #B6E2A1;
     background: radial-gradient(
       #B6E2A1 35%, #F7A4A4 90%
@@ -140,6 +149,7 @@ footer {
   }
 
   .tile-image {
+    border-radius: 3%;
     max-width: max-content;
     display: block;
   }
@@ -170,7 +180,7 @@ footer {
   }
 }
 
-@media (min-width: 401px) and (max-width: 700px) {
+@media (min-width: 381px) and (max-width: 700px) {
   body {
     background: linear-gradient(180deg,
     #7FB77E, #B1D7B4, #7FB77E, #B1D7B4
@@ -198,6 +208,17 @@ footer {
     border-bottom-right-radius: 5%;
   }
 
+  .logo {
+    flex: 1;
+    border-radius: 5% 0% 0% 0%;
+    border: 0 !important;
+    background: radial-gradient(at 50% 50%,
+      #7FB77E 40%, #B1D7B4, transparent 70%
+    );
+    max-width: 200px;
+    min-width: 180px;
+  }
+  
   header>p {
     flex: 1;
     margin: 0;
@@ -211,17 +232,6 @@ footer {
     background: linear-gradient(180deg,
       #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #FFC090
     );
-  }
-
-  .logo {
-    flex: 1;
-    border-radius: 5% 0% 0% 0%;
-    border: 0 !important;
-    background: radial-gradient(at 50% 50%,
-      #7FB77E 40%, #B1D7B4, transparent 70%
-    );
-    max-width: 200px;
-    min-width: 180px;
   }
   
   h1 {
@@ -274,6 +284,7 @@ footer {
     grid-template-rows: 200px 100px;
     gap: 10px;
     row-gap: 0px;
+    padding: 0px 10px 0px 10px;
   }
 
   header {
