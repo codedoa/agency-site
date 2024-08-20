@@ -343,4 +343,8 @@ footer {
   .right img {
     float: left;
   }
+
+  footer {
+    margin-right: 10px;
+  }
 }
