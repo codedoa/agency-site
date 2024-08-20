@@ -61,7 +61,7 @@ h2 {
 
 .card {
   display: inline-block;
-  margin: 0px 10px 10px 0px;
+  margin: 0px 0px 10px 0px;
   font-size: 1rem;
   border: 0.1rem ridge #B6E2A1;
   border-radius: 5%;
