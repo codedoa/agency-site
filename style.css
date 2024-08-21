@@ -4,6 +4,7 @@ body {
   margin: 0;
   background-color: #faf9f6;
   min-height: 100vh;
+  min-width: 100vw;
   background: linear-gradient(180deg,
     #FEBE8C, #FFFBC1, #FEBE8C, #FFFBC1, #FEBE8C
   );
@@ -99,21 +100,22 @@ footer {
     display: flex;
     flex-direction: row;
     max-height: 300px;
+    background: linear-gradient(to bottom,
+      transparent,#B6E2A1 50%,#F7A4A4 60%, transparent
+    );
   }
 
   .logo {
     flex: 1;
     margin: 10px;
     padding: 10px;
-    width: auto;
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
+    border-radius: 50% 50% 50% 0%;
     border: 0.3rem solid #B6E2A1 !important;
     border-left-style: none !important;
-    border-radius: 50%;
-    border-top-left-radius: 0%;
-}
+  }
 
   header > p {
     margin: 10px;
@@ -122,23 +124,22 @@ footer {
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
     border: 0.3rem solid #B6E2A1;
+    border-radius: 50% 50% 0% 50%;
+    border-bottom-style: solid;
     border-right-style: none;
-    border-radius: 50%;
-    border-top-right-radius: 0%;
     text-align: center;
     font-size: 2.3rem;
   }
 
   h1 {
-    margin: 10px;
-    margin-top: -15px;
-    padding: 10px;
+    margin: -10px 10px 10px 10px;
+    padding: 10px 10px 10px 10px;
     background: linear-gradient(0deg,
-     #F7A4A4 30%, #B6E2A1 70%, transparent 80%
+     #F7A4A4 10%, #B6E2A1 45%, #F7A4A4 80%, transparent
     );
     border-radius: 0% 0% 50% 50%;
     border: 0.3rem solid #B6E2A1;
-    border-top: hidden;
+    border-top-style: hidden;
     font-size: 1.5rem;
   }
 
@@ -149,12 +150,6 @@ footer {
       #B6E2A1 35%, #F7A4A4 90%
     );
     max-width: 100%;
-    border: 0.3rem solid #B6E2A1;
-/*
-    border-radius: 0%;
-    border-left-style: none;
-    border-right-style: none;
-*/
     border: 0.3rem solid #B6E2A1;
   }
 
