@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  font-family: "Poppins", sans-serif;
+  font-family: "Jersey 10", Poppins, sans-serif;
   margin: 0;
   background-color: #faf9f6;
   min-height: 100vh;
@@ -18,7 +18,6 @@ body {
 .logo {
   padding: 10px;
   width: 20% !important;
-  flex: 1;
 }
 
 p {
@@ -49,7 +48,8 @@ h1 {
 }
 
 h2 {
-  font-size: 1rem;
+  padding: 10px 0px 0px 0px;
+  margin: 0;
 }
 
 .bb {
@@ -66,6 +66,11 @@ h2 {
   font-size: 1rem;
   border: 0.1rem ridge #B6E2A1;
   border-radius: 5%;
+  p {
+    font-family: Poppins,sans-serif;
+    font-stretch: condensed;
+    padding: 0px 10px 10px 10px;
+  }
 }
 
 .tile-image {
@@ -100,35 +105,48 @@ footer {
     margin: 10px;
     padding: 10px;
     width: auto;
-    border-radius: 50%;
-    border: 0.2rem solid #B6E2A1 !important;
     background: radial-gradient(
-      #B6E2A1 50%,#F7A4A4 70%
+      #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
-  }
+    border: 0.2rem solid #B6E2A1 !important;
+    border-left-style: none !important;
+    border-radius: 50%;
+    border-top-left-radius: 0%;
+/*    border-bottom-right-radius: 0%;
+*/
+}
 
   header > p {
     flex: 1;
     margin: 10px;
-    padding: 10px;
-    text-align: center;
-    font-size: 1.7rem;
-    border: 0.2rem solid #B6E2A1;
-    border-radius: 50%;
+    padding: 15px 10px 10px 10px;
     background: radial-gradient(
-      #B6E2A1 50%,#F7A4A4 70%
+      #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
+    border: 0.2rem solid #B6E2A1;
+    border-right-style: none;
+    border-radius: 50%;
+    border-top-right-radius: 0%;
+/*    border-bottom-left-radius: 0%; 
+*/
+    text-align: center;
+    font-size: 2.3rem;
   }
 
   h1 {
-    font-size: 1.5rem;
-    padding: 10px;
+    padding: 20px 10px 10px 10px;
+    margin: 10px;
+/*    background: linear-gradient(0deg,
+    #F7A4A4 30%, #B6E2A1 70%, transparent 80%
+    );
+*/
+    background: radial-gradient(at 50% 50%,
+    #B6E2A1 40%,#F7A4A4 62%, transparent 75%
+    );
     border-radius: 0% 0% 50% 50%;
     border: 0.2rem solid #B6E2A1;
     border-top: hidden;
-    background: linear-gradient(0deg,
-    #F7A4A4 30%, #B6E2A1 80%, transparent
-    );
+    font-size: 1.5rem;
   }
 
   .card {
@@ -136,7 +154,7 @@ footer {
     display: flex;
     flex-direction: column;
     border: 0.2rem solid #B6E2A1;
-/* straight corners for cards
+/* straight corners for cards on mobilevp
     border-radius: 0%;
     border-left: none;
     border-right: none;
@@ -156,7 +174,7 @@ footer {
   h2 {
     text-align: left !important;
     padding-left: 10px;
-    font-size: 1.5rem;
+    font-size: 2rem;
     margin: 0px 0px 5px 0px;
   }
 
@@ -209,11 +227,11 @@ footer {
 
   .logo {
     flex: 1;
-    border-radius: 5% 0% 0% 0%;
-    border: 0 !important;
     background: radial-gradient(at 50% 50%,
       #7FB77E 40%, #B1D7B4, transparent 70%
     );
+    border-radius: 5% 0% 0% 0%;
+    border: 0 !important;
     max-width: 200px;
     min-width: 180px;
   }
@@ -222,32 +240,33 @@ footer {
     flex: 1;
     margin: 0;
     padding: 40px 20px 0px 20px;
+    background: linear-gradient(180deg,
+      #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4,#7FB77E, #FFC090
+    );
     display: inline;
     text-align: end;
     text-transform: uppercase;
     font-size: 2.2rem;
     border: 0;
     border-bottom-right-radius: 25%;
-    background: linear-gradient(180deg,
-      #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4,#7FB77E, #FFC090
-    );
   }
   
   h1 {
     margin: -10px 0px 10px 0px;
     padding: 10px;
     padding-top: 20px;
+    background: linear-gradient(180deg,
+      #FFC090 50%, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
+    );
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     border-bottom-left-radius: 25%;
     border-bottom-right-radius: 25%;
     border-bottom: 0.2rem solid #7FB77E;
-    border-left: none;
-    border-top: none;
-    border-right: none;
-    background: linear-gradient(180deg,
-      #FFC090 50%, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
-    );
+  }
+
+  h2 {
+    font-size: 1.5rem;
   }
 
   .bb {
@@ -259,10 +278,6 @@ footer {
     background: radial-gradient(at 50% 45%,
       #B1D7B4, #F7F6DC, #FFC090
     );
-  }
-
-  h2 {
-    font-size: 1.2rem;
   }
 
   div.card.right>h2 {
@@ -293,44 +308,48 @@ footer {
     display: flex;
     flex-direction: row;
     border: 0px !important;
+    padding-top: 10px;
   }
 
   .logo {
     flex: 1;
-    border-top-left-radius: 5%;
-    border: 0px !important;
     object-fit: contain;
     background: radial-gradient(at 100% 100%,
-    #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
+      #A8DF8E 40%, #FFE5E5, transparent 70%
     );
+    border-top-left-radius: 5%;
+    border: 0px !important;
   }
   
   header > p {
     flex: 1;
-    border-top-right-radius: 5%;
-    font-size: 3rem;
     padding-left: 4rem;
     background: radial-gradient(at 0% 100%,
-      #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
+      #A8DF8E 40%, #FFE5E5, transparent 70%
     );
-    border: none;
+    border-top-right-radius: 5%;
+    font-size: 3.8rem;
   }
 
   h1 {
     grid-column: span 2;
-    text-align: left;
     margin-bottom: 25px;
-    padding: 15px;
-    border-radius: 0% 0% 5% 5%;
-    border-right: 0px !important;
-    border-bottom: 0.5rex solid #FFBFBF;
+    padding: 15px 400px 15px 15px;
     background: radial-gradient(at 50% 0%,
-      #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
-    );  
+      #A8DF8E 40%, #FFE5E5, transparent 70%
+    );
+    border-radius: 0% 0% 5% 5%;
+    border-right: 0px;
+    border-bottom: 0.2rem solid #FFBFBF;
+    text-transform: lowercase;
+    text-align: end;
+    text-decoration-color: midnightblue;
+    text-decoration-thickness: 0.05rem;
+    text-decoration-line: overline;
   }
 
   h2 {
-    font-size: 1.1rem;
+    font-size: 1.2rem;
   }
 
   .card {
