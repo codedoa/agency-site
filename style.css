@@ -3,7 +3,7 @@ body {
   font-family: "Poppins", sans-serif;
   margin: 0;
   background-color: #faf9f6;
-  min-height: 95vh;
+  min-height: 100vh;
   background: linear-gradient(180deg,
     #FEBE8C, #FFFBC1, #FEBE8C, #FFFBC1, #FEBE8C
   );
@@ -32,7 +32,7 @@ header > p {
   font-size: 2rem;
   margin: 0;
   padding: 0;
-  display: block;
+  display: block-inline;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -88,7 +88,7 @@ footer {
   }
 }
 
-@media (max-width: 380px) {
+@media (max-width: 360px) {
   header {
     display: flex;
     flex-direction: row;
@@ -141,7 +141,6 @@ footer {
     border-left: none;
     border-right: none;
 */
-
     border: 0.2rem solid #B6E2A1;
     background: radial-gradient(
       #B6E2A1 35%, #F7A4A4 90%
@@ -180,10 +179,10 @@ footer {
   }
 }
 
-@media (min-width: 381px) and (max-width: 700px) {
+@media (min-width: 361px) and (max-width: 700px) {
   body {
     background: linear-gradient(180deg,
-    #7FB77E, #B1D7B4, #7FB77E, #B1D7B4
+    #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
     );
     margin: 0;
     .card {
@@ -201,7 +200,7 @@ footer {
     position: sticky;
     top: 0px;
     background: linear-gradient(180deg,
-      #FFC090,#7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #FFC090
+      #FFC090,#7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #7FB77E,#FFC090
     );
     border-bottom: 2px solid #7FB77E;
     border-bottom-left-radius: 5%;
@@ -222,15 +221,15 @@ footer {
   header>p {
     flex: 1;
     margin: 0;
-    padding: 40px 0px 0px 50px;
-    display: inline-flex;
+    padding: 40px 20px 0px 20px;
+    display: inline;
     text-align: end;
     text-transform: uppercase;
     font-size: 2.2rem;
     border: 0;
     border-bottom-right-radius: 25%;
     background: linear-gradient(180deg,
-      #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #FFC090
+      #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4,#7FB77E, #FFC090
     );
   }
   
@@ -246,8 +245,8 @@ footer {
     border-left: none;
     border-top: none;
     border-right: none;
-    background: linear-gradient(0deg,
-      #FFC090, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
+    background: linear-gradient(180deg,
+      #FFC090 50%, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
     );
   }
 
@@ -273,8 +272,10 @@ footer {
 
 @media (min-width: 701px) {
   body {
+    margin: 0;
+    width: 100%;
     background: repeating-linear-gradient(180deg,
-      #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8,#FEBE8C,#F3FDE8, #A8DF8E
+      #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8, #FEBE8C, #F3FDE8,#FEBE8C,#B1D7B4, #B1D7B4, #FEBE8C
     );
   }
 
@@ -326,7 +327,6 @@ footer {
     background: radial-gradient(at 50% 0%,
       #A8DF8E, transparent 60%, #FFE5E5, transparent 20%
     );  
-    max-width: 100%;
   }
 
   h2 {
