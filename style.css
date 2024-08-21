@@ -16,6 +16,7 @@ body {
 }
 
 .logo {
+  flex: 1;
   padding: 10px;
   width: 20% !important;
 }
@@ -31,7 +32,7 @@ header > p {
   font-size: 2rem;
   margin: 0;
   padding: 0;
-  display: block-inline;
+  display: block;
   text-transform: uppercase;
   font-weight: bold;
 }
@@ -82,7 +83,7 @@ h2 {
 }
 
 .right img {
-    float: right;
+  float: right;
 }
 
 footer {
@@ -108,61 +109,53 @@ footer {
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
-    border: 0.2rem solid #B6E2A1 !important;
+    border: 0.3rem solid #B6E2A1 !important;
     border-left-style: none !important;
     border-radius: 50%;
     border-top-left-radius: 0%;
-/*    border-bottom-right-radius: 0%;
-*/
 }
 
   header > p {
-    flex: 1;
     margin: 10px;
-    padding: 15px 10px 10px 10px;
+    padding: 15px 10px 0px 10px;
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
-    border: 0.2rem solid #B6E2A1;
+    border: 0.3rem solid #B6E2A1;
     border-right-style: none;
     border-radius: 50%;
     border-top-right-radius: 0%;
-/*    border-bottom-left-radius: 0%; 
-*/
     text-align: center;
     font-size: 2.3rem;
   }
 
   h1 {
-    padding: 20px 10px 10px 10px;
     margin: 10px;
-/*    background: linear-gradient(0deg,
-    #F7A4A4 30%, #B6E2A1 70%, transparent 80%
-    );
-*/
-    background: radial-gradient(at 50% 50%,
-    #B6E2A1 40%,#F7A4A4 62%, transparent 75%
+    margin-top: -15px;
+    padding: 10px;
+    background: linear-gradient(0deg,
+     #F7A4A4 30%, #B6E2A1 70%, transparent 80%
     );
     border-radius: 0% 0% 50% 50%;
-    border: 0.2rem solid #B6E2A1;
+    border: 0.3rem solid #B6E2A1;
     border-top: hidden;
     font-size: 1.5rem;
   }
 
   .card {
-    max-width: 100%;
     display: flex;
     flex-direction: column;
-    border: 0.2rem solid #B6E2A1;
-/* straight corners for cards on mobilevp
-    border-radius: 0%;
-    border-left: none;
-    border-right: none;
-*/
-    border: 0.2rem solid #B6E2A1;
     background: radial-gradient(
       #B6E2A1 35%, #F7A4A4 90%
     );
+    max-width: 100%;
+    border: 0.3rem solid #B6E2A1;
+/*
+    border-radius: 0%;
+    border-left-style: none;
+    border-right-style: none;
+*/
+    border: 0.3rem solid #B6E2A1;
   }
 
   .tile-image {
@@ -189,7 +182,7 @@ footer {
     position: sticky;
     bottom: 0;
     padding-right: 10px;
-    border: 0.2rem solid #B6E2A1;
+    border: 0.3rem solid #B6E2A1;
     border-radius: 50% 50% 0% 0%;
     background: linear-gradient(0deg,
       #B6E2A1 20%,#F7A4A4 80%
@@ -232,7 +225,7 @@ footer {
     );
     border-radius: 5% 0% 0% 0%;
     border: 0 !important;
-    max-width: 200px;
+    max-width: 180px;
     min-width: 180px;
   }
   
