@@ -50,8 +50,9 @@ h1 {
 }
 
 h2 {
-  padding: 10px 0px 0px 0px;
   margin: 0;
+  padding: 10px !important;
+  padding-bottom: 0px !important;
 }
 
 .bb {
@@ -65,21 +66,22 @@ h2 {
 .card {
   display: inline-block;
   margin: 0px 0px 10px 0px;
-  font-size: 1rem;
   border: 0.1rem ridge #B6E2A1;
   border-radius: 5%;
+  font-size: 1rem;
   p {
+    padding: 0px 10px 0px 10px;
     font-family: Poppins,sans-serif;
     font-stretch: condensed;
-    padding: 0px 10px 10px 10px;
+    font-stretch: 100%;
   }
 }
 
 .tile-image {
-  border: 0.05rem solid black;
+  margin: 0px 10px;
   max-width: 50%;
   float: left;
-  margin: 10px;
+  border: 0.05rem solid black;
   border-radius: 10%;
 }
 
@@ -88,14 +90,15 @@ h2 {
 }
 
 footer p {
+  padding-right: 0px;
   text-align: right;
   color: midnightblue;
-  padding-right: 0px;
   font-size: 1.1rem;
 }
 
 @media (max-width: 360px) {
   body {
+    min-width: 300px;
     background: linear-gradient(0deg,
       #F7A4A4,#F7A4A4
     );  
@@ -118,7 +121,7 @@ footer p {
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
     border-radius: 50% 50% 50% 0%;
-    border: 0.3rem solid #B6E2A1 !important;
+    border: 0.2rem solid #B6E2A1 !important;
     border-left-style: none !important;
   }
 
@@ -128,7 +131,7 @@ footer p {
     background: radial-gradient(
       #B6E2A1 50%,#F7A4A4 60%, transparent 75%
     );
-    border: 0.3rem solid #B6E2A1;
+    border: 0.2rem solid #B6E2A1;
     border-radius: 50% 50% 0% 50%;
     border-bottom-style: solid;
     border-right-style: none;
@@ -143,7 +146,7 @@ footer p {
      #F7A4A4 10%, #B6E2A1 45%, #F7A4A4 80%, transparent
     );
     border-radius: 0% 0% 50% 50%;
-    border: 0.3rem solid #B6E2A1;
+    border: 0.2rem solid #B6E2A1;
     border-top-style: hidden;
     font-size: 1.5rem;
   }
@@ -155,20 +158,31 @@ footer p {
       #B6E2A1 35%, #F7A4A4 90%
     );
     max-width: 100%;
-    border: 0.3rem solid #B6E2A1;
+    border: 0.2rem solid #B6E2A1;
   }
 
   .tile-image {
+    margin: 10px 10px 0px 10px;
+    max-width: 100%;
     border-radius: 3%;
-    max-width: max-content;
-    display: block;
   }
 
   h2 {
-    text-align: left !important;
-    padding-left: 10px;
+    margin: 0;
+    padding: 0px 10px 0px 10px;
     font-size: 2rem;
     margin: 0px 0px 5px 0px;
+
+  }
+
+  h2::before {
+    content: '\294F';
+    padding-right: 10px;
+  }
+
+  h2::after {
+    content: '\2951';
+    padding-left: 10px;
   }
 
   .card p {
@@ -178,7 +192,8 @@ footer p {
   }
 
   footer {
-    min-width: 334px;
+    flex: 1;
+    min-width: 330px;
     position: sticky;
     bottom: 0;
     padding-right: 10px;
@@ -187,9 +202,11 @@ footer p {
     );
     border: 0.3rem solid #B6E2A1;
     border-radius: 50% 50% 0% 0%;
+    p {
+      padding: 0px;
+    }
     p::before {
       content: url('./favicon.png');
-      object-fit: cover;
       padding-right: 10px;
     }
   }
@@ -197,10 +214,10 @@ footer p {
 
 @media (min-width: 361px) and (max-width: 700px) {
   body {
+    margin: 0;
     background: linear-gradient(180deg,
      #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
     );
-    margin: 0;
     .card {
       margin-left: 15px;
       margin-right: 15px;
@@ -218,20 +235,20 @@ footer p {
     background: linear-gradient(180deg,
       #FFC090,#7FB77E, #B1D7B4, #B1D7B4, #B1D7B4, #7FB77E,#FFC090
     );
-    border-bottom: 2px solid #7FB77E;
+    border-bottom: 0.1rem solid #7FB77E;
     border-bottom-left-radius: 5%;
     border-bottom-right-radius: 5%;
   }
 
   .logo {
     flex: 1;
+    max-width: 180px;
+    min-width: 180px;
     background: radial-gradient(at 50% 50%,
       #7FB77E 40%, #B1D7B4, transparent 70%
     );
     border-radius: 5% 0% 0% 0%;
     border: 0 !important;
-    max-width: 180px;
-    min-width: 180px;
   }
   
   header>p {
@@ -242,11 +259,11 @@ footer p {
       #FFC090, #7FB77E, #B1D7B4, #B1D7B4, #B1D7B4,#7FB77E, #FFC090
     );
     display: inline;
-    text-align: end;
-    text-transform: uppercase;
-    font-size: 2.2rem;
     border: 0;
     border-bottom-right-radius: 25%;
+    font-size: 2.2rem;
+    text-align: end;
+    text-transform: uppercase;
   }
   
   h1 {
@@ -256,14 +273,12 @@ footer p {
     background: linear-gradient(180deg,
       #FFC090 50%, #7FB77E, #B1D7B4, #7FB77E, #B1D7B4, #FFC090
     );
-    border-top-left-radius: 0px;
-    border-top-right-radius: 0px;
-    border-bottom-left-radius: 25%;
-    border-bottom-right-radius: 25%;
-    border-bottom: 0.2rem solid #7FB77E;
+    border-radius: 0%;
+    border-bottom: 0.1rem solid #7FB77E;
   }
 
   h2 {
+    margin: 0;
     font-size: 1.5rem;
   }
 
@@ -272,14 +287,31 @@ footer p {
   }
 
   .card {
-    border-color: #7FB77E;
+    margin: 0px 10px 10px 0px;
+    padding: 0px 0px 10px 0px;
     background: radial-gradient(at 50% 45%,
       #B1D7B4, #F7F6DC, #FFC090
     );
+    img {
+      max-width: 48%;
+      margin: 10px 10px 0px 10px;
+      border-color: #7FB77E;
+      border-radius: 0;
+    }
+    p::before {
+      content: '\274f';
+      padding-right: 10px;
+    }
+    border-radius: 0;
   }
 
-  div.card.right>h2 {
-    text-align: right;
+  div.card.right {
+    h2 {
+      text-align: right;
+    }
+    p {
+      margin-top: 10px;
+    }
   }
 }
 
@@ -305,7 +337,6 @@ footer p {
     grid-column: span 2;
     display: flex;
     flex-direction: row;
-    border: 0px !important;
     padding-top: 10px;
   }
 
@@ -315,8 +346,6 @@ footer p {
     background: radial-gradient(at 100% 100%,
       #A8DF8E 40%, #FFE5E5, transparent 70%
     );
-    border-top-left-radius: 5%;
-    border: 0px !important;
   }
   
   header > p {
@@ -337,7 +366,7 @@ footer p {
       #A8DF8E 40%, #FFE5E5, transparent 70%
     );
     border-radius: 0% 0% 5% 5%;
-    border-right: 0px;
+    border-right-style: none;
     border-bottom: 0.2rem solid #FFBFBF;
     text-transform: lowercase;
     text-align: end;
@@ -347,14 +376,23 @@ footer p {
   }
 
   h2 {
-    font-size: 1.2rem;
+    font-size: 1.6rem;
+  }
+
+  h2::after {
+    content: '\27b2';
+    padding-left: 10px; 
   }
 
   .card {
+    padding-bottom: 10px;
     border-color: #FFBFBF;
     background: radial-gradient(
      #FFE5E5 50%, #A8DF8E
     );
+    img {
+      margin-top: 10px;
+    }
   }
 
   .right img {
