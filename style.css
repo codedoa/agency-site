@@ -381,9 +381,10 @@ footer p {
     text-decoration-line: overline;
   }
 
-  h1::before {
-    content: '\2710\00a0';
+  h1::after {
+    content: '\00a0\2710';
   }
+
   h2 {
     font-size: 1.6rem;
   }
