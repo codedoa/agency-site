@@ -367,7 +367,7 @@ footer p {
   h1 {
     grid-column: span 2;
     margin-bottom: 25px;
-    padding: 15px 400px 15px 15px;
+    padding: 15px 320px 15px 15px;
     background: radial-gradient(at 50% 0%,
       #A8DF8E 40%, #FFE5E5, transparent 70%
     );
@@ -382,7 +382,7 @@ footer p {
   }
 
   h1::after {
-    content: '\00a0\2710';
+    content: '\00a0\2710\00a0';
   }
 
   h2 {
