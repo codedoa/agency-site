@@ -87,12 +87,11 @@ h2 {
   float: right;
 }
 
-footer {
-  p {
-    text-align: right;
-    color: midnightblue;
-    padding-right: 0px;
-  }
+footer p {
+  text-align: right;
+  color: midnightblue;
+  padding-right: 0px;
+  font-size: 1.1rem;
 }
 
 @media (max-width: 360px) {
@@ -183,11 +182,16 @@ footer {
     position: sticky;
     bottom: 0;
     padding-right: 10px;
-    border: 0.3rem solid #B6E2A1;
-    border-radius: 50% 50% 0% 0%;
     background: linear-gradient(0deg,
       #B6E2A1 20%,#F7A4A4 80%
     );
+    border: 0.3rem solid #B6E2A1;
+    border-radius: 50% 50% 0% 0%;
+    p::before {
+      content: url('./favicon.png');
+      object-fit: cover;
+      padding-right: 10px;
+    }
   }
 }
 
