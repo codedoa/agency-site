@@ -278,6 +278,7 @@ footer p {
   h2 {
     font-size: 1.5rem;
   }
+
   h2::after {
     content: '\269f';
     padding-left: 10px; 
@@ -380,6 +381,9 @@ footer p {
     text-decoration-line: overline;
   }
 
+  h1::before {
+    content: '\2710\00a0';
+  }
   h2 {
     font-size: 1.6rem;
   }
