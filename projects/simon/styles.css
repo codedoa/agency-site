@@ -1,0 +1,88 @@
+body {
+  text-align: center;
+  background-color: #011F3F;
+}
+
+#level-title {
+  font-family: 'Press Start 2P', cursive;
+  font-size: 3rem;
+  margin:  5%;
+  color: #FEF2BF;
+}
+
+.container {
+  display: block;
+  width: 50%;
+  margin: auto;
+
+}
+
+.resetbtn {
+  display: block;
+  width: 20%;
+  margin: auto;
+  background-color: inherit;
+  font-family: 'Press Start 2P', strong;
+  font-size: 2rem;
+  color: #FEF2BF;
+  text-transform: uppercase;
+}
+
+.resetbtn:before{
+  font-size: 3rem;
+  content: '\2672';
+  padding-right: 12px;
+}
+
+.resetbtn::after {
+  font-size: 3rem;
+  content: '\2672';
+  padding-left: 3px;
+}
+
+.endgame {
+  background-image: url("./images/squirro.gif");
+  background-size: 100%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  z-index: 10;
+}
+
+.btn {
+  margin: 25px;
+  display: inline-block;
+  height: 200px;
+  width: 200px;
+  border: 10px solid black;
+  border-radius: 20%;
+}
+
+.btnhdn {
+  opacity: 0%;
+}
+
+.game-over {
+  background-color: red;
+  opacity: 0.8;
+}
+
+.red {
+  background-color: red;
+}
+
+.green {
+  background-color: green;
+}
+
+.blue {
+  background-color: blue;
+}
+
+.yellow {
+  background-color: yellow;
+}
+
+.pressed {
+  box-shadow: 0 0 20px white;
+  background-color: grey;
+}
