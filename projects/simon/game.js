@@ -9,7 +9,7 @@ var currentLevel=0;
 });
  */
 
-$("#reset").click(function(event) {
+$("#restart").click(function(event) {
   event.preventDefault();
   location.reload();
 });
@@ -82,8 +82,19 @@ $(".btn").each(function() {
   })
 });
 
-$(document).on("keydown", function () {
+/* // Original implementation waiting on keyboard click to start
+ $(document).on("keydown", function () {
   if(clickedPattern.length === gamePattern.length) {
     nextSequence();
   }
+}); 
+*/
+
+ $("#start").on("click", function () {
+  $(this).addClass("btnhdn");
+  $("#restart").removeClass("btnhdn");
+  if(clickedPattern.length === gamePattern.length) {
+    nextSequence();
+  }
+
 });
