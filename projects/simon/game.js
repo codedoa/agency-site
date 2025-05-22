@@ -5,7 +5,7 @@ var currentLevel=0;
 
 $(".container").addClass("beforestartgame");
 
-$("#restart").click(function(event) {
+$("#restart").on("click", function(event) {
   event.preventDefault();
   location.reload();
 });
@@ -67,7 +67,7 @@ function checkAnswer(currentLevel) {
   }
   if(clickedPattern.length === gamePattern.length) {
     clickedPattern = [];
-    setTimeout(nextSequence(),2000);
+    setTimeout(nextSequence(),1000);
   }
 }
 
