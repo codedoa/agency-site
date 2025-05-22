@@ -14,24 +14,21 @@ body {
 .container {
   display: block;
   margin: auto;
+  height: 750px;
+  background-size: 100%;
+  background-repeat: no-repeat;
 }
 
 .startgame {
   max-width: 50%;
-  min-height: 650px;
   background-image: url("./images/simon-game-card.png");
-  background-size: 100%;
-  background-repeat: no-repeat;
 }
 
 .endgame {
-  max-width: 50%;
-  height: 350px;
-  padding: 0 200px;
+  max-width: 70%;
   background-image: url("./images/squirro.gif");
   background-size: 100%;
   background-position: top;
-  background-repeat: no-repeat;
   border-radius: 50%;
 }
 
