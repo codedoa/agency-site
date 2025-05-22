@@ -27,7 +27,7 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  $("#"+color).fadeOut(100).fadeIn(100);
+  $("#"+color).fadeOut(50).fadeIn(50);
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -52,7 +52,7 @@ function iClick(currentColor) {
   $(focusColor[0]).addClass("pressed");
   setTimeout(function () {
     $(focusColor[0]).removeClass("pressed");
-  }, 100);
+  }, 50);
   livenButton(currentColor);
   clickedPattern.push(currentColor);
   checkAnswer(clickedPattern.length);
@@ -67,7 +67,7 @@ function checkAnswer(currentLevel) {
   }
   if(clickedPattern.length === gamePattern.length) {
     clickedPattern = [];
-    setTimeout(nextSequence(),1000);
+    setTimeout(nextSequence(),500);
   }
 }
 
