@@ -1,17 +1,31 @@
+const allClickableKeys = "wasdjkl";
 
-for(let tempo=0; tempo < document.querySelectorAll(".drum").length; tempo++) {
+/* for(let tempo=0; tempo < document.querySelectorAll(".drum").length; tempo++) {
   document.querySelectorAll(".drum")[tempo].addEventListener("click", function() {
+    buzzBuzz(this.textContent);
+    wiggleWiggle(this.textContent);
+  });
+}; */
+
+for(let t=0; t < $(".drum").length; t++) {
+  $(".drum")[t].on("click", function() {
     buzzBuzz(this.textContent);
     wiggleWiggle(this.textContent);
   });
 };
 
-/* // U N C O M M E N T   T O   E N A B L E   K E Y   L I S T E N E R
-  document.addEventListener("keydown", function(event) {
+/* document.addEventListener("keydown", function(event) {
   buzzBuzz(event.key);
   wiggleWiggle(event.key);
+}); */
+
+$("body").on("keydown", function(event) {
+// next lines is a check if key pressed belongs to our mapped keys to avoid exceptions in the console log
+  if(allClickableKeys.includes(event.key)) {
+    buzzBuzz(event.key);
+    wiggleWiggle(event.key);
+  }
 });
-*/
 
 function buzzBuzz(key) {
   switch (key) {
@@ -37,10 +51,12 @@ function buzzBuzz(key) {
       var audio = new Audio('./sounds/crash.mp3');
     break; 
   }
-  audio.play();   
+  if(allClickableKeys.includes(key)) {
+    audio.play();
+  }
 };
 
-function wiggleWiggle (keyKa) {
+/* function wiggleWiggle (keyKa) {
 // next two lines - checking if key pressed belongs to our mapped keys to avoid exceptions in the console log
   const allClickableKeys = "wasdjkl";
   if(allClickableKeys.includes(keyKa)) {
@@ -51,22 +67,12 @@ function wiggleWiggle (keyKa) {
     }
       , 150); 
   }
-}
+} */
 
-/* Higher Level Function Example: 
-function calculator(n1,n2,op) {
-return op(n1,n2);
+  function wiggleWiggle (keyKa) {
+  let activeButt = $("."+keyKa);
+  activeButt.addClass("pressed");
+  setTimeout(function() {
+    activeButt.removeClass("pressed");
+  }, 150);
 }
-function sum(n1,n2) {
-return n1 + n2;
-}
-function sub(n1,n2) {
-return n1 - n2;
-}
-function div(n1,n2) {
-return n1 / n2;
-}
-function mul(n1,n2) {
-return n1 * n2;
-}
-*/
