@@ -31,7 +31,7 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  $("#"+color).fadeOut(450).delay(100).fadeIn(450);
+  $("#"+color).addClass("pressed").delay(300).removeClass("pressed");
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -72,7 +72,7 @@ function checkAnswer(currentLevel) {
   if(clickedPattern.length === gamePattern.length) {
     $(".container").addClass("goodgame").delay(2000).removeClass("goodgame");
     clickedPattern = [];
-    setTimeout(nextSequence(),2000);
+    setTimeout(nextSequence(),1500);
   }
 }
 
