@@ -3,7 +3,9 @@ var gamePattern = [];
 var clickedPattern = [];
 var currentLevel=0;
 
-$(".container").addClass("beforestartgame");
+$(".homebutton").on("click", function() {
+  setTimeout(window.location.href="https://codedoa.github.io/agency-site/",1500);
+});
 
 $("#restart").on("click", function(event) {
   event.preventDefault();
@@ -15,6 +17,8 @@ function endGame() {
   $(".container").addClass("endgame");
   $(".btn").addClass("btnhdn");
   $("body").addClass("game-over");
+  var audio = new Audio('./sounds/wrong.mp3');
+  audio.play();
 }
 
 function nextSequence() {
@@ -27,7 +31,7 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  $("#"+color).fadeOut(50).fadeIn(50);
+  $("#"+color).fadeOut(100).delay(100).fadeIn(100);
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -66,8 +70,9 @@ function checkAnswer(currentLevel) {
     }
   }
   if(clickedPattern.length === gamePattern.length) {
+    $(".container").addClass("goodgame").delay(2000).removeClass("goodgame");
     clickedPattern = [];
-    setTimeout(nextSequence(),500);
+    setTimeout(nextSequence(),2000);
   }
 }
 
@@ -76,14 +81,6 @@ $(".btn").each(function() {
     iClick($(this).attr("id"));
   })
 });
-
-/* // Original implementation waiting on keypress to start the new game
- $(document).on("keydown", function () {
-  if(clickedPattern.length === gamePattern.length) {
-    nextSequence();
-  }
-}); 
-*/
 
 $("#start").on("click", function () {
   $(this).addClass("btnhdn");

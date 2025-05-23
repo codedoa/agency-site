@@ -4,6 +4,17 @@ body {
   min-width: 300px;
 }
 
+.homebutton {
+  position: fixed;
+  margin: 5px;
+  top: 5px;
+  background-image: url("./home-icon.png");
+  background-repeat: no-repeat;
+  background-size: 100%;
+  width: 100px;
+  height: 100px;
+}
+
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
@@ -22,6 +33,14 @@ body {
 .startgame {
   max-width: 50%;
   background-image: url("./images/simon-game-card.png");
+}
+
+.goodgame {
+  max-width: 50%;
+  background-image: url("./images/capybara-cool.jpg");
+  z-index: 10000;
+  border: 2px solid black;
+  border-radius: 50%;
 }
 
 .endgame {

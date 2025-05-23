@@ -1,18 +1,13 @@
 const allClickableKeys = "wasdjkl";
 
 $(".homebutton").on("click", function() {
-  $(location).href ="https://codedoa.github.io/agency-site/";
+  $(location)[0].href="https://codedoa.github.io/agency-site/";
 });
 
 $(".drum").on("click", function() {
   buzzBuzz(this.textContent);
   wiggleWiggle(this.textContent);
 });
-
-/* document.addEventListener("keydown", function(event) {
-  buzzBuzz(event.key);
-  wiggleWiggle(event.key);
-}); */
 
 $("body").on("keydown", function(event) {
 // next lines is a check if key pressed belongs to our mapped keys to avoid exceptions in the console log
@@ -49,20 +44,7 @@ function buzzBuzz(key) {
   audio.play();
 };
 
-/* function wiggleWiggle (keyKa) {
-// next two lines - checking if key pressed belongs to our mapped keys to avoid exceptions in the console log
-  const allClickableKeys = "wasdjkl";
-  if(allClickableKeys.includes(keyKa)) {
-  var activeButt = document.querySelector("."+keyKa);
-    activeButt.classList.add("pressed");
-    setTimeout(function() {
-      activeButt.classList.remove("pressed");
-    }
-      , 150); 
-  }
-} */
-
-  function wiggleWiggle (keyKa) {
+function wiggleWiggle (keyKa) {
   $("."+keyKa).addClass("pressed");
   setTimeout(function() {
     $("."+keyKa).removeClass("pressed");
