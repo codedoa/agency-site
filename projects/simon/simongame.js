@@ -13,12 +13,12 @@ $("#restart").on("click", function(event) {
 });
 
 function endGame() {
+  var audio = new Audio('./sounds/wrong.mp3');
+  audio.play();
   $("#level-title").text("Oooupsy... Level " + currentLevel + " was a bit too crunchy! \nBetter Luck next time!");
   $(".container").addClass("endgame");
   $(".btn").addClass("btnhdn");
   $("body").addClass("game-over");
-  var audio = new Audio('./sounds/wrong.mp3');
-  audio.play();
 }
 
 function nextSequence() {
@@ -31,7 +31,7 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  $("#"+color).fadeOut(100).delay(100).fadeIn(100);
+  $("#"+color).fadeOut(450).delay(100).fadeIn(450);
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -56,7 +56,7 @@ function iClick(currentColor) {
   $(focusColor[0]).addClass("pressed");
   setTimeout(function () {
     $(focusColor[0]).removeClass("pressed");
-  }, 50);
+  }, 300);
   livenButton(currentColor);
   clickedPattern.push(currentColor);
   checkAnswer(clickedPattern.length);
