@@ -31,7 +31,7 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  $("#"+color).addClass("pressed").delay(300).removeClass("pressed");
+  $("#"+color).addClass("pressed").delay(1000).removeClass("pressed");
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -56,7 +56,7 @@ function iClick(currentColor) {
   $(focusColor[0]).addClass("pressed");
   setTimeout(function () {
     $(focusColor[0]).removeClass("pressed");
-  }, 300);
+  }, 1000);
   livenButton(currentColor);
   clickedPattern.push(currentColor);
   checkAnswer(clickedPattern.length);
