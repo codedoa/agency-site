@@ -1,11 +1,8 @@
 const allClickableKeys = "wasdjkl";
 
-/* for(let tempo=0; tempo < document.querySelectorAll(".drum").length; tempo++) {
-  document.querySelectorAll(".drum")[tempo].addEventListener("click", function() {
-    buzzBuzz(this.textContent);
-    wiggleWiggle(this.textContent);
-  });
-}; */
+$(".homebutton").on("click", function() {
+  $(location).href ="https://codedoa.github.io/agency-site/";
+});
 
 $(".drum").on("click", function() {
   buzzBuzz(this.textContent);
