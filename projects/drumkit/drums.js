@@ -51,9 +51,7 @@ function buzzBuzz(key) {
       var audio = new Audio('./sounds/crash.mp3');
     break; 
   }
-  if(allClickableKeys.includes(key)) {
-    audio.play();
-  }
+  audio.play();
 };
 
 /* function wiggleWiggle (keyKa) {
