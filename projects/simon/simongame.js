@@ -31,8 +31,8 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  let aButt = $("#"+color);
-  aButt.addClass("pressed").delay(1500).removeClass("pressed");
+  let aButt = "#"+color;
+  $(aButt).addClass("pressed").delay(1500).removeClass("pressed");
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -68,7 +68,7 @@ function checkAnswer(currentLevel) {
   if(clickedPattern.length === gamePattern.length) {
     $(".container").addClass("goodgame").delay(2000).removeClass("goodgame");
     clickedPattern = [];
-    setTimeout(nextSequence(),1500);
+    setTimeout(nextSequence(),2000);
   }
 }
 
