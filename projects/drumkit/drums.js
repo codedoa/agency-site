@@ -7,12 +7,10 @@ const allClickableKeys = "wasdjkl";
   });
 }; */
 
-for(let t=0; t < $(".drum").length; t++) {
-  $(".drum")[t].on("click", function() {
-    buzzBuzz(this.textContent);
-    wiggleWiggle(this.textContent);
-  });
-};
+$(".drum").on("click", function() {
+  buzzBuzz(this.textContent);
+  wiggleWiggle(this.textContent);
+});
 
 /* document.addEventListener("keydown", function(event) {
   buzzBuzz(event.key);
@@ -68,9 +66,8 @@ function buzzBuzz(key) {
 } */
 
   function wiggleWiggle (keyKa) {
-  let activeButt = $("."+keyKa);
-  activeButt.addClass("pressed");
+  $("."+keyKa).addClass("pressed");
   setTimeout(function() {
-    activeButt.removeClass("pressed");
+    $("."+keyKa).removeClass("pressed");
   }, 150);
 }
