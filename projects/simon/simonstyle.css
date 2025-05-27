@@ -37,18 +37,17 @@ body {
 }
 
 .goodgame {
-  max-width: 50%;
   background-image: url("./images/capybara-cool.jpg");
+  background-position: center;
   border: 2px solid black;
   border-radius: 50%;
-  z-index: 20000;
 }
 
 .endgame {
-  max-width: 70%;
-  background-image: url("./images/squirro.gif");
-  background-size: 100%;
+  max-width: 80%;
+  background-image: url("./images/squirrox.gif");
   background-position: top;
+  background-size: 70%;
   border-radius: 50%;
 }
 

@@ -17,7 +17,6 @@ function endGame() {
   audio.play();
   $("#level-title").text("Oooupsy... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
-  $(".btn").addClass("btnhdn");
   $("body").addClass("game-over");
 }
 
@@ -63,17 +62,24 @@ function iClick(currentColor) {
 function checkAnswer(currentLevel) {
   for(var i=0; i < currentLevel; i++) {
     if(gamePattern[i] !== clickedPattern[i]) {
-      endGame();
+      setTimeout(function () {
+        endGame();
+        $(".btn").addClass("btnhdn");
+      },100);
       return false;
     }
   }
   if(clickedPattern.length === gamePattern.length) {
     setTimeout(function() {
-      $(".container").addClass("goodgame"); //.fadeOut(250).delay(500).fadeIn(250).removeClass("goodgame");
-    },1000);
-    $(".container").removeClass("goodgame");
+      $(".container").addClass("goodgame");
+      $(".btn").addClass("btnhdn");
+    },500);
     clickedPattern = [];
-    setTimeout(nextSequence(),2000);
+    setTimeout(function() {
+      $(".container").removeClass("goodgame");
+      $(".btn").removeClass("btnhdn");
+      nextSequence()
+    },1000);
   }
 }
 
