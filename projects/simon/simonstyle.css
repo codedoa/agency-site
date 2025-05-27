@@ -41,7 +41,7 @@ body {
   background-image: url("./images/capybara-cool.jpg");
   border: 2px solid black;
   border-radius: 50%;
-  z-index: 10000;
+  z-index: 20000;
 }
 
 .endgame {

@@ -31,8 +31,10 @@ function nextSequence() {
 }
 
 function livenButton(color) {
-  let aButt = "#"+color;
-  $(aButt).addClass("pressed").delay(1500).removeClass("pressed");
+  $("#"+color).addClass("pressed");
+  setTimeout(function() {
+    $("#"+color).removeClass("pressed");
+  }, 500);
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -66,7 +68,10 @@ function checkAnswer(currentLevel) {
     }
   }
   if(clickedPattern.length === gamePattern.length) {
-    $(".container").addClass("goodgame").delay(2000).removeClass("goodgame");
+    setTimeout(function() {
+      $(".container").addClass("goodgame"); //.fadeOut(250).delay(500).fadeIn(250).removeClass("goodgame");
+    },1000);
+    $(".container").removeClass("goodgame");
     clickedPattern = [];
     setTimeout(nextSequence(),2000);
   }
@@ -87,3 +92,7 @@ $("#start").on("click", function () {
     nextSequence();
   }
 });
+
+$(".startgame").on("click", function() {
+  $("#start").click();
+})
