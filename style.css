@@ -107,6 +107,7 @@ footer p {
   header {
     display: flex;
     flex-direction: row;
+    font-size: 2.3rem;
     max-height: 300px;
     background: linear-gradient(to bottom,
       transparent,#B6E2A1 50%,#F7A4A4 60%, transparent
@@ -126,6 +127,7 @@ footer p {
   }
 
   header > p {
+    flex: 1;
     margin: 10px;
     padding: 15px 10px 0px 10px;
     background: radial-gradient(
@@ -136,7 +138,10 @@ footer p {
     border-bottom-style: solid;
     border-right-style: none;
     text-align: center;
-    font-size: 2.3rem;
+/*
+    font-size: 2.3rem; 
+*/
+    font-size: 1.75em;
   }
 
   h1 {
