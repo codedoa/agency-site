@@ -18,6 +18,9 @@ function endGame() {
   $("#level-title").text("Oooupsy... Level " + currentLevel + " was a bit too crunchy! Better Luck next time!");
   $(".container").addClass("endgame");
   $("body").addClass("game-over");
+  $(".endgame").on("click", function() {
+    $("#restart").click();
+  })
 }
 
 function nextSequence() {
@@ -33,7 +36,7 @@ function livenButton(color) {
   $("#"+color).addClass("pressed");
   setTimeout(function() {
     $("#"+color).removeClass("pressed");
-  }, 500);
+  }, 250);
   switch (color) {
     case "green": 
      var audio = new Audio('./sounds/green.mp3');
@@ -73,13 +76,13 @@ function checkAnswer(currentLevel) {
     setTimeout(function() {
       $(".container").addClass("goodgame");
       $(".btn").addClass("btnhdn");
-    },500);
+    },200);
     clickedPattern = [];
     setTimeout(function() {
       $(".container").removeClass("goodgame");
       $(".btn").removeClass("btnhdn");
       nextSequence()
-    },1000);
+    },600);
   }
 }
 
