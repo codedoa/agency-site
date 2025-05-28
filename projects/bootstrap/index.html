@@ -4,7 +4,7 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Booty Movass</title>
+  <title>Booty Movers</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha2/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-aFq/bzH65dt+w6FI2ooMVUpc+21e0SRygnTpmBvdBgSdnuTN7QbdgL+OapgHtvPp" crossorigin="anonymous">
   <style>
@@ -13,14 +13,26 @@
       height: 4rem;
       border-radius: .75rem;
     }
-
     .carouselitem img {
-        object-fit: contain;
+      object-fit: contain;
+    }
+    .homebutton {
+      position: fixed;
+      margin: 5px;
+      top: 50px;
+      background-image: url("../../home-icon.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      width: 75px;
+      height: 75px;
+      opacity: 0.5;
+      z-index: 100001;
     }
   </style>
 </head>
 
 <body>
+  <div class="homebutton" id="homebutton"></div>
   <nav class="navbar navbar-expand-lg bg-body-tertiary">
     <div class="container-fluid">
       <a class="navbar-brand" href="#"><img src="./svg/truck.svg" alt="truck brand icon" /> Booty Mov<s><em>ass</em></s><sub>ers</sub></a>
@@ -30,7 +42,7 @@
       <div class="collapse navbar-collapse" id="navbarSupportedContent">
         <ul class="navbar-nav me-auto mb-2 mb-lg-0">
           <li class="nav-item">
-            <a class="nav-link active" aria-current="page" href="#">Home</a>
+            <a class="nav-link active" aria-current="page" href="#" onclick=goHome()>Home</a>
           </li>
           <li class="nav-item">
             <a class="nav-link" href="#">About</a>
@@ -62,7 +74,7 @@
     <h1 class="display-4 fw-bold text-body-emphasis">Move with sorrow</h1>
 
     <div class="col-lg-6 mx-auto">
-      <p class="lead mb-4" style="text-align: justify;">You are not welcome to our website, where we are on a mission to provide abysmal moving services to customers in the US. As a startup, we believe that moving must be stressful and complicated, and we are passionate about making the process as painful and aggravating as possible.
+      <p class="lead mb-4" style="text-align: justify;">You are gkhm...hm... welcome on our website, where we are on a mission to provide abysmal moving services to customers in the US. As a startup, we believe that moving must be stressful and complicated, and we are passionate about making the process as painful and aggravating for you as possible.
       </p>
 
       <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
@@ -83,10 +95,10 @@
     <div class="row g-4 py-5 row-cols-1 row-cols-lg-3">
       <div class="feature col">
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
-          <img src="./svg/tencent-qq.svg" height="40" alt="penguin doesn't care" />
+          <img src="./svg/tencent-qq.svg" height="40" alt="penguin does not care" />
         </div>
         <h3 class="fs-2 text-body-emphasis">Sloppy</h3>
-        <p> Our team of amateur movers are trained to neglect efficiency, organization, and attention to detail. We understand that your possessions are common junk - they are a reflection of your life, memories, and experiences. That's why we do not care to ensure that everything is packed and transported with the least care and attention.</p>
+        <p> Our team of amateur movers are trained to neglect efficiency, organization, and attention to detail. We understand that your possessions are common junk - they are a reflection of your miserable life, memories, and experiences. That's why we do not care enough to ensure whether everything is packed and transported with minuscule care and attention.</p>
         <a href="#" class="icon-link">
           Get a life
           <img src="./svg/chevron-double-right.svg" height="10" alt="chevron right" />
@@ -96,7 +108,7 @@
         <div class="feature-icon d-inline-flex align-items-center justify-content-center text-bg-primary bg-gradient fs-2 mb-3">
           <img src="./svg/trash3.svg" height="40" alt="trash can" />
         </div>
-        <h3 class="fs-2 text-body-emphasis">Rigid</h3>
+        <h3 class="fs-2 text-body-emphasis">Inflexible</h3>
         <p>We offer a range of services to suit anything but your individual needs, whether you're moving locally or across the country. Our team can barely handle themselves, so don't even mention packing, loading, unloading and unpacking; instead you can focus on guessing and stressing out. And with our convoluted pricing and hidden fees, you can trust that you're getting an unfair and uncompetitive rate for our services.</p>
         <a href="#" class="icon-link">
           Get a life
@@ -161,37 +173,49 @@
     <div class="col mb-3">
       <h5>Our Competitors</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Un</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Deux</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Trois</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Quatre</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Cinq</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Un</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Deux</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Trois</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Quatre</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Cinq</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5>Improvement Plan</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">You've</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">gotta</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">be</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">kidding</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">me!</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">You've</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">gotta</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">be</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">kidding</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">me!</a></li>
       </ul>
     </div>
 
     <div class="col mb-3">
       <h5>Go To</h5>
       <ul class="nav flex-column">
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Hell</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Shower</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Find It</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">The Forest</a></li>
-        <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Fishing</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Hell</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Shower</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Find It</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">The Forest</a></li>
+        <li class="nav-item mb-2"><a href="#" class="nav-link pl-1 text-body-secondary">Fishing</a></li>
       </ul>
     </div>
   </footer>
 
+  <script>
+    const homeUrlo = "https://codedoa.github.io/agency-site/";
+    function goHome() {
+      window.location.href = homeUrlo;
+    };
+    document.getElementById("homebutton").addEventListener("click", function() {
+      goHome();
+    });
+    document.getElementsByClassName("btn-outline-secondary")[0].addEventListener("click", function() {
+      goHome();
+    });
+</script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
 </body>
 
