@@ -19,14 +19,14 @@ body {
 #level-title {
   font-family: 'Press Start 2P', cursive;
   font-size: 3rem;
-  margin:  5%;
+  margin: 5%;
   color: #FEF2BF;
 }
 
 .container {
   display: block;
   margin: auto;
-  height: 750px;
+  height: 575px;
   background-size: 100%;
   background-repeat: no-repeat;
 }
@@ -37,18 +37,23 @@ body {
 }
 
 .goodgame {
+  max-width: 60%;
   background-image: url("./images/capybara-cool.jpg");
   background-position: center;
+  background-size: 100%;
   border: 2px solid black;
   border-radius: 50%;
+  box-shadow: 0 0 10px white;
 }
 
 .endgame {
-  max-width: 80%;
+  max-width: 60%;
   background-image: url("./images/squirrox.gif");
-  background-position: top;
-  background-size: 70%;
+  background-position: center;
+  background-size: 100%;
+  border: 2px solid black;
   border-radius: 50%;
+  box-shadow: 0 0 10px white;
 }
 
 .controlbtn {
