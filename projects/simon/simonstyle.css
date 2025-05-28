@@ -11,8 +11,9 @@ body {
   background-image: url("../../home-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  width: 50px;
-  height: 50px;
+  width: 75px;
+  height: 75px;
+  opacity: 0.5;
   z-index: 100001;
 }
 
@@ -86,6 +87,7 @@ body {
 #restart:before {
   font-size: 3rem;
   content: '\267d';
+  overflow: visible;
   padding-right: 12px;
   opacity: 0.6;
 }
@@ -93,6 +95,7 @@ body {
 #restart:after {
   font-size: 3rem;
   content: '\267d';
+  overflow: visible;
   padding-left: 3px;
   opacity: 0.6;
 }
