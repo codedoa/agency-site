@@ -96,6 +96,14 @@ footer p {
   font-size: 1.1rem;
 }
 
+.drumkit-components {
+  padding: 0 20px;
+  font-family: Poppins; 
+  font-weight: normal; 
+  font-size: x-small; 
+  list-style: inside; 
+}
+
 @media (max-width: 576px) {
   body {
     min-width: 300px;
@@ -138,9 +146,6 @@ footer p {
     border-bottom-style: solid;
     border-right-style: none;
     text-align: center;
-/*
-    font-size: 2.3rem; 
-*/
     font-size: 1.05em;
   }
 

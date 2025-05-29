@@ -7,7 +7,7 @@ body {
 .homebutton {
   position: fixed;
   margin: 5px;
-  top: 5px;
+  top: 100px;
   background-image: url("../../home-icon.png");
   background-repeat: no-repeat;
   background-size: 100%;
@@ -86,16 +86,16 @@ body {
 
 #restart:before {
   font-size: 3rem;
+  line-height: 3rem;
   content: '\267d';
-  overflow: visible;
   padding-right: 12px;
   opacity: 0.6;
 }
 
 #restart:after {
   font-size: 3rem;
+  line-height: 3rem;
   content: '\267d';
-  overflow: visible;
   padding-left: 3px;
   opacity: 0.6;
 }
