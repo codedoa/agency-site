@@ -47,8 +47,11 @@
       margin: 15% auto; /* 15% from the top and centered */
       padding: 10px;
       border: 3px solid #060606;
-      width: 400px; /* Could be more or less, depending on screen size */
-      height: 400px;
+      max-width: vmin(400px,90vw); /* Could be more or less, depending on screen size */
+/*      max-height: vmin(400px,90vh); */
+      width: 375px;
+      height: 375px;
+
     }
     .epicfail {
       background-image: url("images/epic-fail.jpg");
