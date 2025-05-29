@@ -1,7 +1,9 @@
 const allClickableKeys = "wasdjkl";
+const homeUrlo = "https://codedoa.github.io/agency-site/#footer";       // production
+// const homeUrlo = "http://127.0.0.1:3000/projects/bootstrap/#footer"; // localhost
 
 $(".homebutton").on("click", function() {
-  $(location)[0].href="https://codedoa.github.io/agency-site/";
+  setTimeout(location[0].href = homeUrlo, 1500);
 });
 
 $(".drum").on("click", function() {
