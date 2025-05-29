@@ -3,7 +3,7 @@ const homeUrlo = "https://codedoa.github.io/agency-site/#footer";       // produ
 // const homeUrlo = "http://127.0.0.1:3000/projects/bootstrap/#footer"; // localhost
 
 $(".homebutton").on("click", function() {
-  setTimeout(location[0].href = homeUrlo, 1500);
+  setTimeout(window.location.href = homeUrlo, 1500);
 });
 
 $(".drum").on("click", function() {
